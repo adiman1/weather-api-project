@@ -40,15 +40,15 @@ weather-api-project/
 
 ## Setup
 
-   1. Install dependencies:
-      ```bash
-      pip install -r requirements.txt
-      ```
-
-   2. Set up the virtual environment:
+   1. Set up a virtual environment:
       ```bash
       python -m venv venv 
       .\venv\Scripts\activate    
+      ```
+
+   2. Install dependencies:
+      ```bash
+      pip install -r requirements.txt
       ```
 
 3. Add your API key in `.env` and configuration in `config_loader.py`.
