@@ -30,6 +30,8 @@ weather-api-project/
 ├── code_testing.ipynb
 │
 ├── main.py
+│
+├── .gitignore
 ├── requirements.txt
 └── README.md
 
