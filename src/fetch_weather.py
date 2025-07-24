@@ -4,7 +4,6 @@ from src import config_loader
 
 key  = config_loader.get_api_key()
 
-
 def get_weather (city): # args is city of interest
     url = f"https://api.weatherstack.com/current?access_key={key}" 
     querystring = {"query":city}
