@@ -38,7 +38,7 @@ weather-api-project/
 
 ```
 
-## Setup
+## ⚙️ Setup
 
    1. Set up a virtual environment:
       ```bash
@@ -53,7 +53,7 @@ weather-api-project/
 
 3. Add your API key in `.env` and configuration in `config_loader.py`.
 
-## Running the Project
+## 🚀 Running the Project
 
    To run the project and fetch weather data:
    ```bash
