@@ -4,7 +4,7 @@ from src import append_data
 
 
 def main():
-    weather_data = fetch_weather.get_weather(city='bangalore')
+    weather_data = fetch_weather.get_weather(city='bangalore') # change city of interest
     append_data.append_to_csv(weather_data)
     append_data.append_split_data(weather_data)
     append_data.append_final_csv(weather_data)
