@@ -1,0 +1,20 @@
+location.name,location.country,location.region,location.lat,location.lon,location.timezone_id,location.localtime,location.localtime_epoch,location.utc_offset
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 13:10,1746623400,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 13:13,1746623580,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 13:20,1746624000,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 13:28,1746624480,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 14:11,1746627060,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 15:47,1746632820,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 18:38,1746643080,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 23:32,1746660720,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-07 23:40,1746661200,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-09 19:03,1746817380,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-10 13:23,1746883380,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-15 10:30,1747305000,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-15 23:56,1747353360,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-05-29 15:43,1748533380,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-06-27 12:55,1751028900,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-07-07 20:31,1751920260,5.50
+Coimbatore,India,Tamil Nadu,10.993,76.961,Asia/Kolkata,2025-07-07 20:31,1751920260,5.50
+Bangalore,India,Karnataka,12.983,77.583,Asia/Kolkata,2025-07-22 22:24,1753223040,5.50
+Bangalore,India,Karnataka,12.983,77.583,Asia/Kolkata,2025-07-24 13:40,1753364400,5.50

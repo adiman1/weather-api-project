@@ -1,0 +1,64 @@
+import pandas as pd
+import os
+import sqlite3
+from .helpers import append_data_func
+from .helpers import split_localtime
+from .helpers import transform_and_append
+
+# Filepaths
+BASE_DIR = "D:/Test/data/"
+RAW_DIR = os.path.join(BASE_DIR, "raw_data")
+STAGED_DIR = os.path.join(BASE_DIR, "staged_data")
+FINAL_DIR = os.path.join(BASE_DIR, "final_data")
+
+# To Raw Data
+def append_to_csv(df, filename=os.path.join(RAW_DIR, "weather_data.csv")):
+    append_data_func(df, filename)
+
+# To Intermediate Data
+def append_split_data(df):
+    request_colnames = [x for x in df.columns if x.startswith('request')]
+    location_colnames = [x for x in df.columns if x.startswith('location')]
+    current_colnames = [x for x in df.columns if x.startswith('current')]
+
+    request_df = df[request_colnames]
+    location_df = df[location_colnames]
+    current_df = df[current_colnames]
+
+    append_data_func(request_df, os.path.join(STAGED_DIR, 'request_from.csv'))
+    append_data_func(location_df, os.path.join(STAGED_DIR, 'location_data.csv'))
+    append_data_func(current_df, os.path.join(STAGED_DIR, 'current_weather.csv'))
+
+# To Final Data to csv
+def append_final_csv(df, filename=os.path.join(FINAL_DIR, "current_weather_final.csv")):
+    
+    '''
+    1) Using loc for creating a view with purpose of explicit modification,
+    2) Here view is not like sql and action on view directly impacts the actual data
+    3) Direct application of list comprehension over df creates another df and also may cause unexpected behavior
+    '''
+    df = df.loc[:, [col for col in df.columns if 
+                    (col.startswith('current.') and col not in ['current.weather_code', 'current.weather_icons', 'current.observation_time']) 
+                    or col == 'location.localtime']] 
+      
+    df.columns = [col.replace('current.', '').replace('location.', '') for col in df.columns]
+    
+    df = split_localtime(df)  # Helper function - To split localtime column into time and date
+    append_data_func(df, filename)
+
+
+# To Final Data to csv
+def append_final_db(df, db_path="D:/Test/data/DB/weather_data.db"):
+    df = transform_and_append(df) 
+
+    conn = sqlite3.connect(db_path)
+
+    try:
+        df.to_sql("current_weather", conn, if_exists="append", index=False)
+        print("Data successfully inserted into the database!")
+    except Exception as e:
+        print(f"Error inserting data: {e}")
+
+    # Commit and close the connection
+    conn.commit()
+    conn.close()
