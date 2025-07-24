@@ -1,7 +1,7 @@
 # Weather Fetching Project
 
 1) This project fetches weather data from an external API - WeatherStack Service.
-2) Had Monthly 100 free calls when project started, but as of July they only provide a 14 day free trial
+2) Had Monthly 100 free calls when project started, but as of July 2025 they only provide a 14 day free trial
 
 
 **Purpose**
