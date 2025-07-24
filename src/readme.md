@@ -1,4 +1,4 @@
-## 🔄 Data Flow in `src/` Directory
+## Data Flow in `src/` Directory
 
 The `src/` folder contains the key logic for the weather data pipeline, organized into modular Python scripts that follow a clear flow from fetching to final storage.
 
@@ -26,7 +26,7 @@ The `src/` folder contains the key logic for the weather data pipeline, organize
   2. Weather fetcher
   3. Data appender
 
-### Flow Summary
+### 🔄 Flow Summary
 
 1. Load configuration using `config_loader.py`
 2. Fetch weather data using `fetch_weather.py`
