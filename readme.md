@@ -7,7 +7,7 @@
 **Purpose**
 1) Normalize the JSON file and stores it as csv.
 2) Store it in a Medallion Structure. i.e. Raw, Staged, Final Visualization Layers.
-3) Also the final layer in a SQLite DB.  
+3) Also store the final layer in a SQLite DB.  
 
 
 ## 🗂️ Project Structure
