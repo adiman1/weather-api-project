@@ -11,7 +11,7 @@
 
 ## 🗂️ Project Structure
 
-'''
+```
 weather-api-project/
 │
 ├── src/
@@ -33,7 +33,7 @@ weather-api-project/
 ├── requirements.txt
 └── README.md
 
-'''
+```
 
 ## Setup
 
