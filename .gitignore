@@ -1,2 +1,17 @@
-.env
-*.pyc
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.envrc
+
+# VS Code settings (optional)
+.vscode/
+
+# Log and temporary files
+*.log
+*.tmp
