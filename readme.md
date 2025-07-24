@@ -1,8 +1,11 @@
 # Weather Fetching Project
 
 This project fetches weather data from an external API - WeatherStack Service, 
-Monthly 100 free calls,
-Purpose - Normalize the JSON file and stores it in a csv Format.
+Monthly 100 free calls
+
+**Purpose**
+1) Normalize the JSON file and stores it in a csv Format.
+2) Store in DB and also in a Medallion Structure. i.e. Raw, Staged, Visualization Format
 
 ## Setup
 
