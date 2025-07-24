@@ -71,9 +71,9 @@ This script:
 
 ## 🧱 Architecture: Medallion Pattern
 
-- **Raw Layer:** Full JSON API responses  
-- **Staged Layer:** Normalized CSVs (e.g. `request_from.csv`, `location_data.csv`)  
-- **Final Layer:** Flattened and enriched weather data for analytics  
+- **Raw Layer:** Full JSON API responses Normalized as csv
+- **Staged Layer:** Split Normalized CSVs (e.g. `request_from.csv`, `location_data.csv`)  
+- **Final Layer:** Stripped Necessary weather data for analytics  
 
 ## 🛢️ Database Integration
 
