@@ -1,21 +1,22 @@
 import pandas as pd
 import os
 import sqlite3
+from src.config_loader import get_db_url
 from .helpers import append_data_func
 from .helpers import split_localtime
 from .helpers import transform_and_append
 
-# Filepaths
+# Filepaths to store Medallion Structure
 BASE_DIR = "D:/Test/data/"
 RAW_DIR = os.path.join(BASE_DIR, "raw_data")
 STAGED_DIR = os.path.join(BASE_DIR, "staged_data")
 FINAL_DIR = os.path.join(BASE_DIR, "final_data")
 
-# To Raw Data
+# To Raw Data (Bronze)
 def append_to_csv(df, filename=os.path.join(RAW_DIR, "weather_data.csv")):
     append_data_func(df, filename)
 
-# To Intermediate Data
+# To Intermediate Data (Silver)
 def append_split_data(df):
     request_colnames = [x for x in df.columns if x.startswith('request')]
     location_colnames = [x for x in df.columns if x.startswith('location')]
@@ -29,7 +30,7 @@ def append_split_data(df):
     append_data_func(location_df, os.path.join(STAGED_DIR, 'location_data.csv'))
     append_data_func(current_df, os.path.join(STAGED_DIR, 'current_weather.csv'))
 
-# To Final Data to csv
+# To Final Data (Gold)
 def append_final_csv(df, filename=os.path.join(FINAL_DIR, "current_weather_final.csv")):
     
     '''
@@ -47,10 +48,10 @@ def append_final_csv(df, filename=os.path.join(FINAL_DIR, "current_weather_final
     append_data_func(df, filename)
 
 
-# To Final Data to csv
-def append_final_db(df, db_path="D:/Test/data/DB/weather_data.db"):
-    df = transform_and_append(df) 
-
+# To append final data to SQLite DB (Also Gold)
+def append_final_db(df):
+    df = transform_and_append(df)
+    db_path = get_db_url()  # Dynamically fetch the DB path from .env
     conn = sqlite3.connect(db_path)
 
     try:
@@ -59,6 +60,5 @@ def append_final_db(df, db_path="D:/Test/data/DB/weather_data.db"):
     except Exception as e:
         print(f"Error inserting data: {e}")
 
-    # Commit and close the connection
     conn.commit()
     conn.close()
