@@ -27,13 +27,14 @@ weather-api-project/
 │ ├── staged_data/
 │ └── final_data/
 │
-├── code_testing.ipynb
+├── testing/
+│ ├── code_testing.ipynb
 │
 ├── main.py
 │
 ├── .gitignore
 ├── requirements.txt
-└── README.md
+└── readme.md
 
 ```
 
