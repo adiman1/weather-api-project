@@ -1,7 +1,8 @@
 # Weather Fetching Project
 
-This project fetches weather data from an external API - WeatherStack Service, 
-Monthly 100 free calls
+1) This project fetches weather data from an external API - WeatherStack Service.
+2) Had Monthly 100 free calls when project started, but as of July they only provide a 14 day free trial
+
 
 **Purpose**
 1) Normalize the JSON file and stores it in a csv Format.
