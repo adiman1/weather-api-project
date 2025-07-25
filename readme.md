@@ -95,6 +95,6 @@ Use `notebooks/code_testing.ipynb` to test, visualize, or prototype changes inte
 
 - Use `visualize.py` for charts and plots  
 - Add logic for storage of logs and retries  
-- Support multiple cities or batch mode  
+- Support multiple cities or batch mode. Project was made to store only single location data
 - Include more tests  
 
