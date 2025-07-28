@@ -93,7 +93,7 @@ Use `notebooks/code_testing.ipynb` to test, visualize, or prototype changes inte
 
 ## 📊 Visual of a sample run
 
-A manual run was done at some points of a day and plotted
+A manual run was done at some points on 2025-05-07 and plotted
 
 ![Sample Output](https://github.com/adiman1/weather-api-project/blob/4ddf6b89871a885df8104a7b13284ed25d1f292b/images/sample_trial_output.png)
 
