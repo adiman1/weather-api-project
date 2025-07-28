@@ -91,7 +91,7 @@ Use `notebooks/code_testing.ipynb` to test, visualize, or prototype changes inte
 1) Store your Weatherstack API key securely. It is loaded via `config_loader.py`.
 2) You can use a `.env` for local setup (not included in repo).
 
-## Visual of a sample run
+## 📊 Visual of a sample run
 
 A manual run was done at some points of a day and plotted
 
