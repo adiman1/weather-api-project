@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS current_weather (
 """
 
 def create_database():
-    conn = sqlite3.connect(DB_PATH) # uses path if available or creates new db
+    conn = sqlite3.connect(DB_PATH) # uses db in path if available or creates new db
     cursor = conn.cursor()
     cursor.execute(CREATE_TABLE_SQL)
     conn.commit()
