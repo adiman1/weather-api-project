@@ -17,7 +17,3 @@ def get_weather (city): # args is city of interest
             return df
         else:
             return {"error": f"Failed to retrieve data. Status code: {response.status_code}"}
-        
-    except Exception as e:
-        return {"error": f"An error occurred: {str(e)}"}
-
