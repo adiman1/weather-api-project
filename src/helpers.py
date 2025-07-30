@@ -2,22 +2,17 @@ import os
 import pandas as pd
 
 def append_data_func(df, filepath):
-    try:
-        if os.path.exists(filepath):
+    if os.path.exists(filepath):
             df.to_csv(filepath, mode='a', header=False, index=False)
             print(f"Appended to {filepath}")
-        else:
-            print(f"Unable to append to {filepath}")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
+    else:
+        print(f"Unable to append to {filepath}")
 
 def split_localtime(df):
     if 'localtime' in df.columns:
         df[['observation_date', 'observation_time']] = df['localtime'].str.split(' ', expand=True)
         df.drop(columns=['localtime'], inplace=True)
     return df
-
 
 def transform_and_append(df):
 
