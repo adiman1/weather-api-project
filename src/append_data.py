@@ -57,8 +57,10 @@ def append_final_db(df):
     try:
         df.to_sql("current_weather", conn, if_exists="append", index=False)
         print("Data successfully inserted into the database!")
+
+    # exceptions handled via logging the failures into console, ideally we should save it in files for auditing runs
     except Exception as e:
-        print(f"Error inserting data: {e}")
+        logging.exception("Failed to insert data into the database.")
 
     conn.commit()
     conn.close()
