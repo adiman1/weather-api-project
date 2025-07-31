@@ -35,7 +35,7 @@ weather-api-project/
 ├── main.py
 │
 ├── .gitignore
-├── .env  # (dont forget to add your API keys)
+├── .env
 ├── requirements.txt
 └── readme.md
 
@@ -103,5 +103,9 @@ A manual run was done at some points on 2025-05-07 and plotted
 - Use `visualize.py` for charts and plots  
 - Add logic for storage of logs and retries  
 - Support multiple cities or batch mode. Project was made to store only single location data
-- Include more tests  
+- Include more tests
+
+## Important note
+
+** dont forget to add your API key and DB Path **
 
