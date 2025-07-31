@@ -18,5 +18,5 @@ def get_weather (city): # args is city of interest
         else:
             return {"error": f"Failed to retrieve data. Status code: {response.status_code}"}
     except Exception as e:
-    print("Error occurred:", e)
+        print("Error occurred:", e)
 
