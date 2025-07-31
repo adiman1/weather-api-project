@@ -2,11 +2,15 @@ import os
 import pandas as pd
 
 def append_data_func(df, filepath):
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)  # Ensure directory exists
+
     if os.path.exists(filepath):
-            df.to_csv(filepath, mode='a', header=False, index=False)
-            print(f"Appended to {filepath}")
+        df.to_csv(filepath, mode='a', header=False, index=False)
+        print(f"Appended to {filepath}")
     else:
-        print(f"Unable to append to {filepath}")
+        df.to_csv(filepath, mode='w', header=True, index=False)
+        print(f"Created and wrote to {filepath}")
+
 
 def split_localtime(df):
     if 'localtime' in df.columns:
