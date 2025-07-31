@@ -20,3 +20,6 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.getcwd(), '..'))
 sys.path.append(PROJECT_ROOT)
 
 from src import config_loader
+```
+
+**Note:** Certain Paths are hardcoded in the notebook. Please do change them.
