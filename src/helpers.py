@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 def append_data_func(df, filepath):
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)  # Ensure directory exists
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
     if os.path.exists(filepath):
         df.to_csv(filepath, mode='a', header=False, index=False)
