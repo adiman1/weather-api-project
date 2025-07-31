@@ -7,11 +7,12 @@ from .helpers import split_localtime
 from .helpers import transform_and_append
 
 # Filepaths to store Medallion Structure
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw_data")
 STAGED_DIR = os.path.join(DATA_DIR, "staged_data")
 FINAL_DIR = os.path.join(DATA_DIR, "final_data")
+
 
 # To Raw Data (Bronze)
 def append_to_csv(df, filename=os.path.join(RAW_DIR, "weather_data.csv")):
