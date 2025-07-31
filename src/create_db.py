@@ -1,5 +1,8 @@
 import sqlite3
-from config import DB_PATH
+import os
+
+DB_PATH = os.path.abspath(os.path.join('..', 'data', 'weather.db'))
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
 CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS current_weather (
@@ -37,12 +40,13 @@ CREATE TABLE IF NOT EXISTS current_weather (
 """
 
 def create_database():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH) # uses db in path if available or creates new db
     cursor = conn.cursor()
     cursor.execute(CREATE_TABLE_SQL)
     conn.commit()
     conn.close()
     print(f"Database created at: {DB_PATH}")
+    print("Table 'current_weather' created.")
 
 if __name__ == "__main__":
     create_database()
