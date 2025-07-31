@@ -35,7 +35,7 @@ weather-api-project/
 ├── main.py
 │
 ├── .gitignore
-├── .env  # dont forget to add your API keys
+├── .env  # (dont forget to add your API keys)
 ├── requirements.txt
 └── readme.md
 
