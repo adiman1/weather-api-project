@@ -29,6 +29,7 @@ weather-api-project/
 │ ├── staged_data/
 │ └── final_data/
 │ └── weather.db/
+│ ├── current_weather table
 │
 ├── testing/
 │ ├── code_testing.ipynb
