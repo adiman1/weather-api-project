@@ -107,5 +107,5 @@ A manual run was done at some points on 2025-05-07 and plotted
 
 ## Important note
 
-**don't forget to add your API key and DB Path**
+**Don't forget to add your API key and DB Path in .env**
 
