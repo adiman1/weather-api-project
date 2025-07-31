@@ -110,5 +110,6 @@ A manual run was done at some points on 2025-05-07 and plotted
 ## Important note
 
 **1) Don't forget to add your API key and DB Path in .env**
+
 **2) Use any Python 3.10.xx versions for requirements compatibility**
 
