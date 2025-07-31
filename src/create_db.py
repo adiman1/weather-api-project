@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = os.path.abspath(os.path.join('..', 'data', 'weather.db'))
+DB_PATH = os.path.abspath(os.path.join('..', 'data', 'weather_data.db'))
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
 CREATE_TABLE_SQL = """
